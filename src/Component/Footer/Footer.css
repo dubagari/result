@@ -1,0 +1,20 @@
+
+/* .footer-contain .footer{
+   
+    
+    
+} */
+.footer h2{
+    text-align: center;
+    color: #333;
+    
+}
+
+.footer{
+    height: 5rem;
+    border: .3 solid #fff;
+    background: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    bottom: 0;
+}
