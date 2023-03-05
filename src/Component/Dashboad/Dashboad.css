@@ -1,0 +1,19 @@
+.aside-header{
+    width: 15%;
+    background: #fff;
+    height: 85vh;
+    padding: 4rem 0;
+}
+
+.aside-header nav li{
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    color: #302C42;
+    background: #FFF;
+    padding: 1rem 2rem;
+}
+
+.aside-header nav li:hover{
+    background: #302C42;
+    color: #fff;
+}

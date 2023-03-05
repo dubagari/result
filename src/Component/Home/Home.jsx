@@ -2,23 +2,26 @@
 import './Home.css'
 import image from '../pic/image2.jpg'
 import image2 from '../pic/image1.jpg'
+import {btn_data} from './Data_Api'
 import { HiOutlineArrowLongRight } from 'react-icons/hi2'
 import { IoLocation } from 'react-icons/io5'
 import {BiPhoneCall } from 'react-icons/bi'
 import {RxEnvelopeClosed } from 'react-icons/rx'
-import { Button, Article } from './Button'
+import { Button } from './Home_Component/Button'
+import data from './Data_Api'
+import { Article } from './Home_Component/Article'
+import img from '../pic/image2.webp'
+import Cart from './Home_Component/Cart'
+import cart_api from './Home_Component/Cart_Api'
+
+
+
 
 
 
 const Home = () => {
 
-  const data = {
-    text: 'Build your world',
-    text2: 'lets get in touch',
-    arrow: <HiOutlineArrowLongRight size={50} color={'#fff'} />,
-    text3: 'rescamp',
-    intro: 'introduction',
-  }
+
   
   return (
     <>
@@ -33,10 +36,10 @@ const Home = () => {
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum perferendis veritatis aspernatur in veniam, incidunt error dicta maiores, nam explicabo sequi vero doloribus qui nobis quam libero, vitae molestiae repellendus vel. Voluptas iste, fugit perspiciatis, nulla aut dolor consequatur earum nihil, vel corrupti eligendi quibusdam incidunt unde! Hic, nisi fugiat!</p>
 
                 
-              <div className="btn-flex home-btn">
-                  {<Button text={data.text} />}
-                  <HiOutlineArrowLongRight size={50} color={'#fff'} />  
-                </div>
+              <div className="btn-flex">
+                {<Button text={btn_data.text} site={btn_data.site} />}
+                  <HiOutlineArrowLongRight size={50} color={'#fff'} className='arr' />  
+              </div>
               
               
             </div>
@@ -88,8 +91,8 @@ const Home = () => {
 
           <article>
                 <div className="contact container">
-                  
-              {<Article arrow={data.arrow} text3={ data.text3} intro={data.intro} />}
+              
+              <Article arrow={data.arrow} intro={data.intro2} text3={data.text3} info={data.info} />
                     
                     <div className="contain2">
                            <div className="btn-info">
@@ -123,20 +126,28 @@ const Home = () => {
           </article>
 
           <article>
-            <div className="contact container">
-            {<Article/>}
-            </div>
+            <div className="cart">
+               <div className="contact1 container">
 
+              {<Article arrow={data.arrow} text3={data.text3} info={data.info} intro={ data.intro} />}
+
+            </div>
+            <div className="cart-value">
+                {cart_api.map((val, index) => {
+                  return <Cart key={index} img={val.img} title={val.tile} desc={val.desc} />
+                })}            
+             </div>
+            </div>
+           
           </article>
-        <div className="val">
-          <div className="hero2">
-            <div className="back1"></div>
-            <div className="back1"></div>
-            <div className="back1"></div>
-            <div className="back1"></div>
-            <div className="back1"></div>
-          </div>
-        </div>
+
+          <section>
+            <div className="contact1 container">
+                {<Article arrow={data.arrow} text3={data.text3} info={data.info} intro={ data.dsc} />}
+            </div>
+            
+          </section>
+      
         </div>
 
 

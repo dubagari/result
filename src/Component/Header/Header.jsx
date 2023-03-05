@@ -40,7 +40,9 @@ const Header = () => {
                 
                     
                   </ul>
+                  
                 </nav>
+                  <Link to='/dashboad'> <li className='dasboad'>dashboad</li></Link>
                 
                 <div className= "header-btn">
                     <div className='header-btn-login capitalize'><Link to='/sign'><li><RiUser3Fill/> sign in</li></Link></div> 

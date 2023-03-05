@@ -59,6 +59,13 @@ header .header .navbar-list ul li:hover{
     color: #C0B7E8;
 }
 
+.dasboad{
+    font-size: 1.5rem;
+    background: #fff;
+    color: #302C42;
+    padding: .7rem 2rem;
+    text-transform: uppercase;
+}
 
 
 .togole{
